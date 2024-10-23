@@ -56,7 +56,6 @@ const App = () => {
       const response = await fetch('https://d79543.lev1-azure-nginx-7504bb02.unx.sas.com/microanalyticScore/modules/auto_loan_test/steps/execute', {
         method: 'POST',
         headers: {
-          mode: 'no-cors',
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${hardCodedBearerToken}`
         },
