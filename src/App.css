@@ -1,119 +1,100 @@
-/* Base styles */
+/* Add a background image to the entire app container */
 .app-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
-  background-image: url('https://img.freepik.com/premium-photo/bmw-car-road_1135277-769.jpg?w=740'); /* Replace with your image */
+  background-image: url('https://www.mclarenlife.com/attachments/namaka-blue-gt-1-jpg.195971/'); /* Path to your background image */
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background fixed while scrolling */
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff; /* White text for the entire app */
 }
 
+/* Header styles */
 .header {
   text-align: center;
-  font-weight: bold;
   margin-bottom: 20px;
+  margin-top: -400px;
+  padding-top: -400px;
 }
 
 .header h1 {
-  margin: 0;
-  font-size: 36px;
-  font-weight: bold;
-  color: #007bff; /* SAS Viya blue color */
+  color: #0071c5;
 }
 
 .header p {
-  margin: 5px 0;
-  font-weight: bold;
-  font-size: 18px;
-  color: #007bff; /* SAS Viya blue color */
+  color: #0071c5;
 }
 
+/* Form container */
 .form-container {
-  width: 100%;
-  max-width: 400px;
-  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  background-color: rgba(51, 51, 51, 0.9); /* Dark background with opacity for the form */
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.form-container form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-container form div {
-  margin-bottom: 10px;
-}
-
-.form-container form label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-container form input,
-.form-container form select {
-  padding: 8px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-.form-container form button {
+/* Input fields */
+input, select {
+  background-color: #444444; /* Dark background for input fields */
+  color: #ffffff; /* White text in input fields */
+  border: 1px solid #555555;
+  width: 100%;
   padding: 10px;
   border-radius: 4px;
-  background-color: #007bff;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* Input field hover and focus effects */
+input:focus, select:focus {
+  border-color: #007bff; /* Border color on focus */
+  outline: none;
+}
+
+/* Button styling */
+button {
+  background-color: #007bff; /* Primary button color */
+  color: #ffffff;
   border: none;
-}
-
-.form-container form button:disabled {
-  background-color: #ccc;
-}
-
-.form-container form button:enabled:hover {
-  background-color: #0056b3;
-}
-
-.form-container p {
-  text-align: center;
-  color: #333;
-}
-
-/* Hamburger menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
+  padding: 10px;
+  border-radius: 4px;
   cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:disabled {
+  background-color: #555555; /* Disabled button color */
+}
+
+button:hover:enabled {
+  background-color: #0056b3; /* Button hover effect */
+}
+
+/* Hamburger menu styling */
+.hamburger {
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 20px;
+  cursor: pointer;
 }
 
 .hamburger .bar {
   width: 25px;
   height: 3px;
-  background-color: white; /* White to stand out on dark backgrounds */
-  margin: 4px 0;
-  transition: 0.4s;
+  background-color: #ffffff;
+  margin: 5px 0;
 }
 
-/* Fullscreen navigation */
-.navbar {
-  display: flex;
-  justify-content: flex-end;
-}
-
+/* Navigation menu */
 .nav-menu {
-  list-style: none;
   display: none;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .nav-menu.open {
@@ -121,26 +102,11 @@
 }
 
 .nav-menu li {
+  list-style: none;
   margin: 10px 0;
 }
 
-.nav-menu a {
+.nav-menu li a {
+  color: #ffffff;
   text-decoration: none;
-  color: white; /* White to contrast with the background */
-  font-size: 16px;
-}
-
-/* Media query for larger screens */
-@media (min-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-menu {
-    display: none; /* Initially hidden */
-  }
-
-  .nav-menu.open {
-    display: flex; /* Show when open */
-  }
 }
